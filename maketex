@@ -1,0 +1,15 @@
+#!/bin/bash -x
+if [ "$1" = '' ]; then
+	echo "no input file"
+	exit
+fi
+​
+name=`basename $1 .tex`
+if [ $name = $1 ]; then
+	echo "input file name must end with .tex."
+	exit
+fi
+platex "$name.tex"
+platex "$name.aux"
+dvipdfmx "$name.dvi"
+rm $name.aux $name.dvi *.log
