@@ -1,5 +1,5 @@
 # セットアップ
-1. sudo のインストール
+## 1. sudo のインストール
 ```shellsession
 $ su
 $ apt install sudo
@@ -7,28 +7,28 @@ $ gpasswd -a <user> sudo
 $ exit (re-login)
 ```
 
-2. パッケージリストのアップデート, システムのアップグレード
+## 2. パッケージリストのアップデート, システムのアップグレード
 ```shellsession
 $ sudo apt update
 $ sudo apt upgrade
 ```
 
-3. テキストエディタのインストール
+## 3. テキストエディタのインストール
 
 ```shellsession
 $ sudo apt install emacs vim
 ```
 
-4. 基本的な開発環境のインストール
+## 4. 基本的な開発環境のインストール
 ```shellsession
 $ sudo apt install build-essential cmake git
 ```
 
-5. capslock の無効化
-   - `/etc/default/keyboard` の `XKBOPTIONS` を `ctrl:nocaps` に変更
-   - `/sbin/reboot`
+## 5. capslock の無効化
+- `/etc/default/keyboard` の `XKBOPTIONS` を `ctrl:nocaps` に変更
+- `/sbin/reboot`
 
-6. fish のインストール
+## 6. fish のインストール
 ```shellsession
 $ sudo apt install fish
 $ chsh -s /bin/fish
@@ -36,7 +36,7 @@ $ exit (re-login)
 ```
 `$HOME/.config/fish/config.fish` に, `set -x PATH /bin /sbin $HOME/bin` を追加
     
-7. tmux のインストール
+## 7. tmux のインストール
 ```shellsession
 $ sudo apt install tmux
 $ cd /tmp
@@ -66,8 +66,8 @@ bind 2 split-window -v
 $ tmux
 ```
 
-8. nvidia-driver のインストール
-   - `/etc/apt/sources.list`のどこかに、`deb https://ftp.jp.debian.org/debian/ bullseye main non-free contrib`を追加
+## 8. nvidia-driver のインストール
+- `/etc/apt/sources.list`のどこかに、`deb https://ftp.jp.debian.org/debian/ bullseye main non-free contrib`を追加
    
 ```
 $ sudo apt update
@@ -107,25 +107,24 @@ Mon Apr 18 22:27:18 2022
 +-----------------------------------------------------------------------------+
 ```
 
-9. サウンドドライバのインストール
+## 9. サウンドドライバのインストール
 ```shellsession
 $ sudo apt install alsa-utils pulseaudio
 ```
 
 
-10. pip と python-xlib のインストール
+## 10. pip と python-xlib のインストール
 ```shellsession
 $ sudo apt install python-pip
 $ pip3 install xlib
 ```
 
-11. X11 と urxvt のインストール
-
+## 11. X11 と urxvt のインストール
 ```shellsession
 $ sudo apt install xbase-clients rxvt-unicode 
 ```
 
-12. powerline フォントのインストール
+## 12. powerline フォントのインストール
 ```shellsession
 $ cd
 $ git clone https://github.com/powerline/fonts.git
@@ -133,7 +132,7 @@ $ cd fonts
 $ ./install.sh
 ```
 
-13. ウィンドウマネージャのインストール
+## 13. ウィンドウマネージャのインストール
 ```shellsession
 $ sudo apt install imagemagick
 $ cd
@@ -141,7 +140,7 @@ $ git clone https://github.com/void-hoge/hogewm.git
 $ cp hogewm/home/.* .
 ```
 
-14. ウィンドウマネージャの起動
+## 14. ウィンドウマネージャの起動
 ```shellsession
 $ startx
 ```
@@ -149,14 +148,14 @@ $ startx
     - C-M-2 でテキストエディタを開く.
     - C-M-3 でウェブブラウザを開く (デフォルトは google-chrome なので開けない).
 
-15. ウェブブラウザのインストール
+## 15. ウェブブラウザのインストール
 ```shellsession
 $ sudo apt install firefox-esr
 ```
     - firefox を開き, google-chrome のインストーラ (deb) ファイルをとってきてインストール.
     - hogewm で, ブラウザを `google-chrome` から `firefox` に変更する.
 
-16. LaTeX 環境の作成
+## 16. LaTeX 環境の作成
 ```shellsession
 $ sudo apt install texlive-lang-cjk xdvik-ja evince
 $ sudo apt install texlive-fonts-recommended texlive-fonts-extra
