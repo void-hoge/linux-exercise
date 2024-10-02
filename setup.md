@@ -9,7 +9,7 @@ $ sudo apt upgrade
 $ su
 $ apt install sudo
 $ gpasswd -a <user> sudo
-$ exit (re-login)
+$ exit # relogin
 ```
 
 ## 3. テキストエディタのインストール
@@ -33,7 +33,7 @@ $ sudo apt install fish
 $ chsh -s /bin/fish
 $ exit (re-login)
 ```
-`$HOME/.config/fish/config.fish` に, `set -x PATH /bin /sbin $HOME/bin` を追加
+- `$HOME/.config/fish/config.fish` に, `set -x PATH /bin /sbin $HOME/bin` を追加
     
 ## 7. tmux のインストール
 ```shellsession
@@ -46,7 +46,7 @@ $ make
 $ sudo make install
 ```
 
-以下のファイルを `$HOME/.tmux.conf` として保存
+- 以下のファイルを `$HOME/.tmux.conf` として保存
 ```conf
 set -g status-bg black
 set -g status-fg white
@@ -60,7 +60,7 @@ bind 3 split-window -h
 bind 2 split-window -v
 ```
 
-起動
+- 起動
 ```
 $ tmux
 ```
@@ -109,7 +109,9 @@ Mon Apr 18 22:27:18 2022
 ## 9. サウンドドライバのインストール
 ```shellsession
 $ sudo apt install alsa-utils pulseaudio
+$ pavucontrol & # GUI ボリュームコントローラの起動
 ```
+- C-q で終了
 
 
 ## 10. pip と python-xlib のインストール
@@ -143,16 +145,16 @@ $ cp hogewm/home/.* .
 ```shellsession
 $ startx
 ```
-    - C-M-1 でターミナルを開く.
-    - C-M-2 でテキストエディタを開く.
-    - C-M-3 でウェブブラウザを開く (デフォルトは google-chrome なので開けない).
+- C-M-1 でターミナルを開く.
+- C-M-2 でテキストエディタを開く.
+- C-M-3 でウェブブラウザを開く (デフォルトは google-chrome なので開けない).
 
 ## 15. ウェブブラウザのインストール
 ```shellsession
 $ sudo apt install firefox-esr
 ```
-    - firefox を開き, google-chrome のインストーラ (deb) ファイルをとってきてインストール.
-    - hogewm で, ブラウザを `google-chrome` から `firefox` に変更する.
+- firefox を開き, google-chrome のインストーラ (deb) ファイルをとってきてインストール.
+- hogewm で, ブラウザを `google-chrome` から `firefox` に変更する.
 
 ## 16. LaTeX 環境の作成
 ```shellsession
@@ -160,8 +162,7 @@ $ sudo apt install texlive-lang-cjk xdvik-ja evince
 $ sudo apt install texlive-fonts-recommended texlive-fonts-extra
 ```
 
-以下を `$HOME/bin/maketex` として保存
-
+- 以下を `$HOME/bin/maketex` として保存
 ```bash
 #!/bin/bash -x
 if [ "$1" = '' ]; then
@@ -180,7 +181,7 @@ dvipdfmx "$name.dvi"
 rm $name.aux $name.dvi *.log
 ```
 
-実行ビット付与
+- 実行ビット付与
 ```shellsession
 $ chmod +x $HOME/bin/maketex
 ```
