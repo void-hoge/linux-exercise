@@ -1,16 +1,15 @@
 # セットアップ
-## 1. sudo のインストール
+## 1. パッケージリストのアップデート, システムのアップグレード
+```shellsession
+$ sudo apt update
+$ sudo apt upgrade
+```
+## 2. sudo のインストール
 ```shellsession
 $ su
 $ apt install sudo
 $ gpasswd -a <user> sudo
 $ exit (re-login)
-```
-
-## 2. パッケージリストのアップデート, システムのアップグレード
-```shellsession
-$ sudo apt update
-$ sudo apt upgrade
 ```
 
 ## 3. テキストエディタのインストール
