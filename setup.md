@@ -27,9 +27,11 @@ $ sudo apt install build-essential cmake git
 ## 5. fish のインストール
 ```shellsession
 $ sudo apt install fish
-$ chsh -s /bin/fish
+$ chsh -s `which fish`
 $ exit (re-login)
+$ sudo /sbin/shutdown now
 ```
+
 - `$HOME/.config/fish/config.fish` に, `set -x PATH /bin /sbin $HOME/bin` を追加
     
 ## 6. tmux のインストール
