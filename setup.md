@@ -29,7 +29,6 @@ $ sudo apt install build-essential cmake git
 $ sudo apt install fish
 $ chsh -s `which fish`
 $ exit (re-login)
-$ sudo /sbin/shutdown now
 ```
 
 - `$HOME/.config/fish/config.fish` に, `set -x PATH /bin /sbin $HOME/bin` を追加
