@@ -32,7 +32,7 @@ $ exit (re-login)
 ```
 
 - `$HOME/.config/fish/config.fish` に, `set -x PATH /bin /sbin $HOME/bin` を追加
-    
+
 ## 6. tmux のインストール
 ```shellsession
 $ sudo apt install tmux
@@ -114,7 +114,7 @@ $ pavucontrol & # GUI ボリュームコントローラの起動
 
 ## 9. pip と python-xlib のインストール
 ```shellsession
-$ sudo apt install python-pip
+$ sudo apt install python3-pip
 $ pip3 install xlib
 ```
 
